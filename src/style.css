@@ -1,0 +1,423 @@
+@font-face {
+  font-family: "ralewaybold";
+  src: url("./font/raleway-bold-webfont.woff2") format("woff2"),
+    url("./font/raleway-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ralewayregular";
+  src: url("./font/raleway-regular-webfont.woff2") format("woff2"),
+    url("./font/raleway-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ------ Colors ------ */
+
+:root {
+  --purple-clr: #6906ff;
+  --pink-clr: #ff5f61;
+  --dark-clr: #1f3149;
+  --text-clr: #7c7c7c;
+
+  /* --- Font sizes --- */
+  --p-font-size: 16px;
+  --sm-font-size: 14px;
+}
+
+/* ------ Default styles ------ */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a,
+button,
+input::placeholder {
+  font-family: "ralewayregular", sans-serif;
+  text-decoration: none;
+  color: inherit;
+}
+
+a {
+  display: inline-block;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input:focus {
+  outline: none;
+}
+
+button:hover,
+button:focus {
+  cursor: pointer;
+  outline: none;
+}
+
+ul li {
+  list-style: none;
+}
+hr {
+  width: 80%;
+  margin-inline: auto;
+  background-color: var(--text-clr);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ------ End of default styles ------ */
+
+/* ------ Utility Classes ------ */
+
+.th-100,
+.th-200,
+.th-300 {
+  font-family: "ralewaybold", sans-serif;
+  font-weight: bold;
+  color: var(--dark-clr);
+}
+
+.th-100 {
+  font-size: 18px;
+}
+
+.th-200 {
+  font-size: 28px;
+}
+
+.th-300 {
+  font-size: 45px;
+}
+
+.tb {
+  font-size: var(--p-font-size);
+  color: var(--text-clr);
+  font-family: "ralewayregular", sans-serif;
+}
+
+.t-sm {
+  font-size: var(--sm-font-size);
+  color: var(--text-clr);
+  font-family: "ralewayregular", sans-serif;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-lg {
+  margin-top: 180px;
+}
+
+.mt-md {
+  margin-top: 36px;
+}
+
+.mt-sm {
+  margin-top: 25px;
+}
+
+.gap {
+  gap: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.btn {
+  padding: 10px 25px;
+  border-radius: 20px;
+  color: white;
+  background-color: var(--pink-clr);
+  font-size: var(--p-font-size);
+  border: none;
+  outline: none;
+}
+
+.btn:hover,
+.btn:focus {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.container {
+  width: min(100%, 1088px);
+  margin-inline: auto;
+  padding-inline: 3vw;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5vw;
+}
+
+.left-flex-item {
+  width: 50%;
+}
+
+.right-flex-item {
+  width: 50%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+
+/* ------ End of utility Classes ------ */
+
+/* ------Owl Carousel Styles ------- */
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: var(--pink-clr);
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background: none;
+  border: 1px solid var(--pink-clr);
+}
+/* ------ Custom styles ------ */
+header {
+  background-color: var(--purple-clr);
+  color: white;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+header a:hover {
+  text-decoration: none;
+}
+
+header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  width: 100px;
+}
+
+header .logo img {
+  height: 100%;
+}
+
+header nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 50px;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+header nav ul li a {
+  padding: 100px 20px;
+}
+
+header nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.burger {
+  display: none;
+}
+
+.hero {
+  background-color: var(--purple-clr);
+  padding-block: 100px;
+}
+
+.hero h1,
+.hero p {
+  color: white;
+}
+
+.admission-box {
+  background: var(--pink-clr);
+  width: min(90%, 400px);
+  border-radius: 10px;
+  border-top: 6px solid var(--dark-clr);
+  padding-block: 30px;
+  gap: 10px;
+  position: relative;
+  transform: translateY(-40%);
+}
+
+.admission-box hr {
+  border: 1px solid white;
+  width: 20%;
+}
+
+.admission-box p,
+.admission-box h2 {
+  color: white;
+}
+
+.admission-box form {
+  position: relative;
+  width: 80%;
+}
+
+.admission-box form input {
+  padding-block: 10px;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  padding-left: 20px;
+}
+
+.admission-box form input::placeholder {
+  opacity: 0.7;
+}
+.admission-box form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 20px 20px 0;
+  border: none;
+  background-color: var(--dark-clr);
+  height: 35px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admission-box form button img {
+  height: 50%;
+}
+
+.feedback {
+  width: 100%;
+}
+
+.feedback p {
+  text-align: center;
+}
+
+.feedback .bold {
+  color: var(--pink-clr);
+}
+
+@media screen and (max-width: 750px) {
+  :root {
+    /* --- Font sizes --- */
+    --p-font-size: 14px;
+    --sm-font-size: 12px;
+  }
+
+  .th-100 {
+    font-size: 15px;
+  }
+
+  .th-200 {
+    font-size: 22px;
+  }
+
+  .th-300 {
+    font-size: 37px;
+  }
+
+  .mt-lg {
+    margin-top: 72px;
+  }
+
+  .mt-md {
+    margin-top: 24px;
+  }
+
+  .mt-sm {
+    margin-top: 18px;
+  }
+
+  .flex-between {
+    flex-direction: column;
+  }
+
+  .left-flex-item {
+    width: 100%;
+  }
+
+  .right-flex-item {
+    width: 100%;
+  }
+
+  .admission-box {
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  header nav {
+    position: absolute;
+    background: white;
+    top: 80px;
+    left: 50%;
+    color: var(--purple-clr);
+    transform: translateX(-50%);
+    width: min(400px, 95%);
+    text-align: center;
+    padding-block: 30px;
+    border-radius: 5px;
+    display: none;
+  }
+
+  header nav.active {
+    display: block;
+  }
+
+  header nav ul {
+    display: block;
+    width: 100%;
+  }
+
+  header nav ul li a:first-child {
+    padding-top: 0;
+  }
+
+  header nav ul li a {
+    padding: 20px;
+  }
+
+  header nav ul li a:hover {
+    background: none;
+  }
+
+  .burger {
+    display: block;
+  }
+}

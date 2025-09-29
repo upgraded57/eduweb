@@ -281,6 +281,30 @@ header nav ul li a:hover {
   color: white;
 }
 
+.about-hero {
+  background: url("/src/images/world-map.svg");
+  min-height: 600px;
+  padding-block: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  padding-inline: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero h1,
+.about-hero p {
+  color: white;
+}
+
+.about-hero h1 {
+  font-family: "ralewayregular", sans-serif;
+  font-size: 30px;
+}
+
 .admission-box {
   background: var(--pink-clr);
   width: min(90%, 400px);
@@ -403,6 +427,49 @@ header nav ul li a:hover {
   transition: 0.4s;
 }
 
+.objective {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  background: var(--dark-clr);
+  margin-bottom: 40px;
+  height: 300px;
+  overflow: hidden;
+  color: white;
+  border-radius: 20px;
+}
+
+.objective.reverse {
+  direction: rtl;
+}
+
+.objective span {
+  padding: 20px;
+  direction: ltr;
+}
+
+.objective span h3 {
+  font-family: "ralewaybold", sans-serif;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.objective span {
+  font-family: "ralewayregular", sans-serif;
+}
+
+.objective .image {
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+
+.objective .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media screen and (max-width: 750px) {
   :root {
     /* --- Font sizes --- */
@@ -494,5 +561,14 @@ header nav ul li a:hover {
 
   .burger {
     display: block;
+  }
+
+  .about-hero h1 {
+    font-size: 22px;
+  }
+
+  .objective {
+    grid-template-columns: repeat(1, 1fr);
+    height: 500px;
   }
 }

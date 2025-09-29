@@ -125,6 +125,10 @@ img {
   margin-top: 25px;
 }
 
+.mt-xs {
+  margin-top: 8px;
+}
+
 .gap {
   gap: 20px;
 }
@@ -149,7 +153,8 @@ img {
   cursor: pointer;
 }
 
-.container {
+.container,
+section {
   width: min(100%, 1088px);
   margin-inline: auto;
   padding-inline: 3vw;
@@ -160,6 +165,12 @@ img {
   justify-content: space-between;
   align-items: center;
   gap: 5vw;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
 }
 
 .left-flex-item {
@@ -227,8 +238,13 @@ header .logo {
   width: 100px;
 }
 
-header .logo img {
-  height: 100%;
+header .logo a {
+  font-family: "ralewaybold", sans-serif;
+  font-size: 20px;
+}
+
+header .logo a span {
+  color: var(--pink-clr);
 }
 
 header nav {
@@ -332,6 +348,61 @@ header nav ul li a:hover {
   color: var(--pink-clr);
 }
 
+.solid {
+  min-height: 300px;
+  border-radius: 40px;
+  background: url("/src/images/sprinkle.svg");
+  padding: 30px;
+}
+
+.solid h4 {
+  max-width: 800px;
+  color: white;
+  font-family: "ralewayregular", sans-serif;
+  text-wrap: balance;
+}
+
+.subjects {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.subjects p {
+  font-family: "ralewayregular", sans-serif;
+  border: 1px solid var(--dark-clr);
+  padding: 6px 20px 6px 30px;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.subjects p:hover {
+  background: var(--dark-clr);
+  color: white;
+  padding: 6px 20px 6px 36px;
+}
+.subjects p:hover::before {
+  width: 20px;
+  height: 20px;
+  left: 6px;
+}
+
+.subjects p::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  width: 10px;
+  height: 10px;
+  background: var(--pink-clr);
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
 @media screen and (max-width: 750px) {
   :root {
     /* --- Font sizes --- */
@@ -365,6 +436,10 @@ header nav ul li a:hover {
 
   .flex-between {
     flex-direction: column;
+  }
+
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .left-flex-item {
